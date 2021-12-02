@@ -15,3 +15,13 @@
       console.log("error", err);
     })
   }
+
+   export const getCarFetch = () => {
+    const endpoint = "/api/cars";
+    return fetch(`${API_URL}${endpoint}`)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("data", data);
+      return data;
+    });
+  }

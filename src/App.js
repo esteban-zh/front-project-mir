@@ -4,7 +4,7 @@ import CarList from "./components/CarList";
 // import axios from "axios";
 
 // import { API_URL } from "./constants";
-import { getCarAxios } from "./api/cars";
+import { getCarAxios , getCarFetch} from "./api/cars";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -13,22 +13,17 @@ function App() {
 
   const [cars, setCars] = useState([]);
 
-  // const getCarFetch = () => {
-  //   const endpoint = "/api/cars";
-  //   fetch(`${API_URL}${endpoint}`)
-  //   .then((res) => res.json())
-  //   .then((data) => {
-  //     console.log("data", data);
-  //     setCars(data);
-  //   });
-  // }
 
-
-  useEffect(async () => {
+  useEffect(() => {
     // getCarFetch();
-    const data = await getCarAxios();
-    console.log("data en useefect", data)
+    // const data = await getCarAxios();
+    // console.log("data en useefect", data)
+    //   setCars(data);
+    async function fetch() {
+      const data = await getCarFetch()
       setCars(data);
+    }
+    fetch();
   }, []);
 
   return (
