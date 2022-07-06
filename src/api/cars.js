@@ -1,7 +1,5 @@
 //   import axios from "axios";
   import { API_URL } from "../constants";
-
-
 //   export const getCarAxios = () => {
 //     const endpoint = "/api/cars";
 //     return axios
@@ -15,7 +13,6 @@
 //       console.log("error", err);
 //     })
 //   }
-
    export const getCarFetch = () => {
     const endpoint = "/api/cars";
     return fetch(`${API_URL}${endpoint}`)
