@@ -1,5 +1,5 @@
 //   import axios from "axios";
-  import { API_URL } from "../constants";
+  import { API_URL,  API_URL_PEX } from "../constants";
 //   export const getCarAxios = () => {
 //     const endpoint = "/api/cars";
 //     return axios
@@ -18,7 +18,21 @@
     return fetch(`${API_URL}${endpoint}`)
     .then((res) => res.json())
     .then((data) => {
-      console.log("data", data);
       return data;
     });
   }
+
+   export const getImgFetch = () => {
+    return fetch(`${ API_URL_PEX}`,{
+      headers: {
+        Authorization: '563492ad6f9170000100000135be910d986143b499589ab781c4d3e9'
+      }
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      const {photos:imgs} = data;
+      return imgs;
+    });
+  }
+
+  //563492ad6f9170000100000135be910d986143b499589ab781c4d3e9

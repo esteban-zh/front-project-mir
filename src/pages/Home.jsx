@@ -2,11 +2,11 @@ import React from 'react'
 import Header from '../components/Header'
 import CarList from '../containers/CarList'
 
-const Home = ({list}) => {
+const Home = (props) => {
   return (
     <div className="contenedor">
         <Header />
-        <CarList list={list}/>
+        <CarList list={props.list} images={props.images} />
     </div>
   )
 }
