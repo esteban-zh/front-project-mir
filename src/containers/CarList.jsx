@@ -8,7 +8,7 @@ const CarList = ({list, images}) => {
     return ( 
     <>
     <div className="title">
-    <h2>Alquila facilmente nuestros autos</h2>
+    <h1>Alquila facilmente nuestros autos</h1>
     </div>
     <div className="section">
         {
